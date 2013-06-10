@@ -1,6 +1,8 @@
 /* 
  * Queue
  * Labb 2 Uppgift 6
+ * 
+ * Simulera FIFO skrivar aktivitet
  *  
  */
 
@@ -28,11 +30,11 @@ public class Queue
 	{
 		if(numberOfItems + 1 <= queueSize) 
 		{
-			queueArray[rear] = input;
+			queueArray[rear] = input;	//put in rear since it's a queue
 			rear++;
 			numberOfItems++;
 			
-			System.out.println("INSERT" + input + " Was Added to the Queue\n");
+			System.out.println(input + " Was Added to the printer queue\n");
 		}
 		else 
 		{
@@ -63,11 +65,11 @@ public class Queue
 	 */
 	public void peek() 
 	{
-		System.out.println("The First Element is " + queueArray[front]);
+		System.out.println("The first document in printer Queue is " + queueArray[front]);	//display front
 	}
 	
 	/**
-	 * Display the queue
+	 * Display the queue by front first
 	 */
 	public void displayTheQueue() 
 	{
@@ -109,12 +111,15 @@ public class Queue
 		 * Controller
 		 */
 		
-		theQueue.insert("P1");
-		theQueue.insert("P2");
-		theQueue.insert("P3");
-		//theQueue.remove();
+		theQueue.insert("D1");
+		theQueue.insert("D2");
+		theQueue.insert("D3");
 		
-		//theQueue.displayTheQueue();
-		//theQueue.peek();
+		
+		theQueue.peek();
+		theQueue.displayTheQueue();
+		theQueue.remove();
+		theQueue.peek();
+		theQueue.displayTheQueue();
 	}
 }
