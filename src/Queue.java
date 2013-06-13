@@ -1,8 +1,8 @@
 /* 
  * Queue
- * Labb 2 Uppgift 6
+ * L2 U6
  * 
- * Simulera FIFO skrivar aktivitet
+ * FIFO skrivar aktivitet
  *  
  */
 
